@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Tutorial</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container" id="navigation">
+            <h1>BattleShip Tutorial</h1>
+            <select class="dropdown">
+                <option value="">Select a Step</option>
+                <option value="introduction">Introduction</option>
+                <option value="step1">Step 1</option>
+                <option value="step2">Step 2</option>
+                <option value="step3">Step 3</option>
+                <option value="step4">Step 4</option>
+                <option value="step5">Step 5</option>
+            </select>
+        </div>
+    </header>
 
+    <main>
+        <section class="container" id="introduction">
+            <h2>Introduction to Battleship</h2>
+            <p>Battleship is a strategic game where players try to sink each other's ships. The game has a rich history, dating back to the early 20th century...</p>
+            <img src="battleship-image.jpg" alt="Battleship Game" class="game-image">
+        </section>
+
+        <section class="container" id="steps">
+            <h2>Step-by-Step Process to Play</h2>
+            
+            <div class="step" id="step1">
+                <h3>Step 1: Players sit opposite each other</h3>
+                <!-- Add additional information here -->
+            </div>
+
+            <div class="step" id="step2">
+                <h3>Step 2: Ensure you have all the ships</h3>
+                <!-- Add additional information here -->
+            </div>
+
+            <div class="step" id="step3">
+                <h3>Step 3: Arrange your ships secretly</h3>
+                <div class="sub-step">
+                    <h4>Rules of Placement</h4>
+                    <!-- we'll add the JS visual representation here -->
+                </div>
+                <div>
+                    <h4>Visual Representation of How to Arrange the Ships</h4>
+                    <!-- we'll add the JS visual representation here -->
+                     <div id="gameBoard" class="sub-step grid"></div>
+                </div>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>Step 4: Decide which player goes first</h3>
+                <!-- Add additional information here -->
+            </div>
+
+            <div class="step" id="step5">
+                <h3>Step 5: Take turns firing shots</h3>
+                <div class="sub-step">
+                    <h4>Hit Scenario</h4>
+                    <!-- we'll add the JS visual representation here -->
+                    <div id="hit" class="grid"></div>
+                </div>
+                <div id="miss" class="sub-step">
+                    <h4>Miss Scenario</h4>
+                    <div id="players">
+                        <div id="player1" class="grid"></div>
+                        <div id="player2" class="grid"></div>
+                    </div>
+                    <!-- we'll add the JS visual representation here -->
+                </div>
+                <div class="sub-step">
+                    <h4>Sink Scenario</h4>
+                    <!-- we'll add the JS visual representation here -->
+                </div>
+                <div class="sub-step">
+                    <h4>Lost Scenario</h4>
+                    <!-- we'll add the JS visual representation here -->
+                </div>
+                <div class="sub-step">
+                    <h4>Win Scenario</h4>
+                    <!-- we'll add the JS visual representation here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/initial.js"></script>
+</body>
+</html>
