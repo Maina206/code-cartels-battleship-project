@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship Tutorial</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container" id="navigation">
+            <h1>BattleShip Tutorial</h1>
+            <select class="dropdown">
+                <option value="">Select a Step</option>
+                <option value="introduction">Introduction</option>
+                <option value="step1">Step 1</option>
+                <option value="step2">Step 2</option>
+                <option value="step3">Step 3</option>
+                <option value="step4">Step 4</option>
+                <option value="step5">Step 5</option>
+            </select>
+        </div>
+    </header>
 
+    <main>
+        <section class="container" id="introduction">
+            <h2>Introduction to Battleship</h2>
+            <p>Battleship is a strategic game where players try to sink each other's ships. The game has a rich history, dating back to the early 20th century...</p>
+            <img src="battleship-image.jpg" alt="Battleship Game" class="game-image">
+        </section>
+
+        <section class="container" id="steps">
+            <h2>Step-by-Step Process to Play</h2>
+            <div class="step" id="step1">
+                <h3>Step 1: Players sit opposite each other</h3>
+                <p>Make sure you have a flat surface and enough space for both players.</p>
+            </div>
+
+            <div class="step" id="step2">
+                <h3>Step 2: Ensure you have all the ships</h3>
+                <p>Each player should have the following ships: Aircraft Carrier, Battleship, Cruiser, Submarine, and Destroyer.</p>
+            </div>
+
+            <div class="step" id="step3">
+                <h3>Step 3: Arrange your ships secretly</h3>
+                <div class="sub-step">
+                    <h4>Rules of Placement</h4>
+                    <p>Ships must be placed either horizontally or vertically, and they cannot overlap.</p>
+                </div>
+                <div>
+                    <h4>Visual Representation of How to Arrange the Ships</h4>
+                    <div id="gameBoard" class="sub-step grid"></div>
+                </div>
+            </div>
+
+            <div class="step" id="step4">
+                <h3>Step 4: Decide which player goes first</h3>
+                <p>Players can flip a coin or use any other method to determine who goes first.</p>
+            </div>
+
+            <div class="step" id="step5">
+                <h3>Step 5: Take turns firing shots</h3>
+                <p>Players take turns announcing a coordinate to fire a shot and see if they hit or miss.</p>
+                <div id="sinkContainer" class="sub-step">
+                    <h4>Sink Scenario</h4>
+                    <p>Announce when each ship sinks. If every square of a ship gets hit, that ship is considered sunk. Players should inform each other whenever a ship is sunk, naming the type of ship that was hit.</p>
+                </div>
+                <div id="players">
+                    <div class="player-container">
+                        <h2>Player 1's Board</h2>
+                        <div id="player1" class="grid"></div>
+                    </div>
+                
+                    <div class="player-container">
+                        <h2>Player 2's Pin Grid</h2>
+                        <div id="player2" class="grid"></div>
+                    </div>
+                </div>
+                
+                <button id="sinkButton">Sink</button>
+            </div>
+        </section>
+    </main>
+    <div id="players"></div> 
+    <script src="./js/sink.js"></script>
+</body>
+</html>
