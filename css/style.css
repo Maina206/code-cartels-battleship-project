@@ -1,1 +1,148 @@
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e90ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #1e90ff;
+    margin: 0;
+}
+
+h2 {
+    color: #1e90ff;
+    margin-top: 0;
+}
+
+h3 {
+    color: #1e90ff;
+    margin-top: 15px;
+}
+
+h4 {
+    color: #333;
+    margin-top: 10px;
+}
+
+.dropdown {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #1e90ff; 
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 200px; 
+}
+
+
+
+.dropdown:hover {
+    background-color: #e0e0e0;
+    border-color: #1c86ee; 
+}
+
+.game-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+    margin: 15px 0;
+    padding: 15px;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    background-color: #e8f4fd;
+    transition: box-shadow 0.3s;
+}
+
+.step:hover {
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.3);
+}
+
+.sub-step {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px dashed #1e90ff;
+    border-radius: 5px;
+    background-color: #f1f9ff;
+}
+
+#players {
+    display: flex;
+    padding: 10px;
+    margin: 15px;
+}
+
+#player1 {
+    margin-right: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(11, 40px);
+    grid-template-rows: repeat(11, 40px);
+    gap: 1px;
+  }
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid black;
+    font-size: 14px;
+  }
+
+.label {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .dropdown {
+        width: 100%; 
+        font-size: 16px;
+    }
+}
+
