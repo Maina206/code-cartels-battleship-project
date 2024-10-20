@@ -94,7 +94,7 @@ h4 {
     background-color: #f1f9ff;
 }
 
-#players {
+.players {
     display: flex;
     padding: 10px;
     margin: 15px;
@@ -124,6 +124,28 @@ h4 {
     background-color: #f0f0f0;
     font-weight: bold;
   }
+
+#lostP1 {
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+
+#winP2 {
+    margin-bottom: 50px;
+}
+
+.players p {
+    /* border: 1px solid black; */
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+.players h5 {
+    /* border: 1px solid black; */
+    margin-bottom: 15px;
+    padding: 25px;
+    font-size: 1.5rem;
+}
 
 @media (max-width: 600px) {
     .container {

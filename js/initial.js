@@ -1,50 +1,76 @@
-//general create function
-function createSpan(r, c) {
-    const span = document.createElement("span");
-    span.style.width = "20px";
-    span.style.height = "20px";
-    span.style.borderRadius = "10000px";
-    span.style.backgroundColor = "red";
-    span.id = `${r},${c},step1,span1`;
-  
-    return span;
-  }
-  
+// Function to create the Battleship grid
+function createBattleshipGrid(elementID) {
+    const gridContainer = document.getElementById(elementID);
+    const rows = 10;
+    const cols = 10;
+    const rowLabels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
 
-     // Function to create the Battleship grid
-     function createBattleshipGrid(elementID) {
-        const gridContainer = document.getElementById(elementID);
-        const rows = 10;
-        const cols = 10;
-        const rowLabels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+    // Create the top-left corner cell (empty)
+    const emptyCell = document.createElement("div");
+    emptyCell.className = "cell label";
+    gridContainer.appendChild(emptyCell);
 
-        // Create the top-left corner cell (empty)
-        const emptyCell = document.createElement("div");
-        emptyCell.className = "cell label";
-        gridContainer.appendChild(emptyCell);
+    // Create the column labels (1 to 10)
+    for (let col = 1; col <= cols; col++) {
+        const colLabel = document.createElement("div");
+        colLabel.className = "cell label";
+        colLabel.textContent = col;
+        gridContainer.appendChild(colLabel);
+    }
 
-        // Create the column labels (1 to 10)
+    // Create the grid with row labels and cells
+    for (let row = 0; row < rows; row++) {
+        // Create the row label (A to J)
+        const rowLabel = document.createElement("div");
+        rowLabel.className = "cell label";
+        rowLabel.textContent = rowLabels[row];
+        gridContainer.appendChild(rowLabel);
+
+        // Create the grid cells for each row
         for (let col = 1; col <= cols; col++) {
-          const colLabel = document.createElement("div");
-          colLabel.className = "cell label";
-          colLabel.textContent = col;
-          gridContainer.appendChild(colLabel);
-        }
-
-        // Create the grid with row labels and cells
-        for (let row = 0; row < rows; row++) {
-          // Create the row label (A to J)
-          const rowLabel = document.createElement("div");
-          rowLabel.className = "cell label";
-          rowLabel.textContent = rowLabels[row];
-          gridContainer.appendChild(rowLabel);
-
-          // Create the grid cells for each row
-          for (let col = 1; col <= cols; col++) {
             const cell = document.createElement("div");
             cell.className = "cell";
             cell.setAttribute("data-coordinate", `${rowLabels[row]}-${col}`);
             // cell.textContent = `${rowLabels[row]}-${col}`; // Optional: show the coordinates
+            gridContainer.appendChild(cell);
+          }
+        }
+      }
+
+//function to create player grid
+function createBattleshipPinGrid(elementID) {
+    const gridContainer = document.getElementById(elementID);
+    const rows = 10;
+    const cols = 10;
+    const rowLabels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+
+    // Create the top-left corner cell (empty)
+    const emptyCell = document.createElement("div");
+    emptyCell.className = "cell label";
+    gridContainer.appendChild(emptyCell);
+
+    // Create the column labels (1 to 10)
+    for (let col = 1; col <= cols; col++) {
+        const colLabel = document.createElement("div");
+        colLabel.className = "cell label";
+        colLabel.textContent = col;
+        gridContainer.appendChild(colLabel);
+    }
+
+    // Create the grid with row labels and cells
+    for (let row = 0; row < rows; row++) {
+        // Create the row label (A to J)
+        const rowLabel = document.createElement("div");
+        rowLabel.className = "cell label";
+        rowLabel.textContent = rowLabels[row];
+        gridContainer.appendChild(rowLabel);
+
+        // Create the grid cells for each row
+        for (let col = 1; col <= cols; col++) {
+            const cell = document.createElement("div");
+            cell.className = "cell";
+            cell.setAttribute("data-coordinate", `${rowLabels[row]}-${col}`);
+            cell.textContent = `${rowLabels[row]}-${col}`; // Optional: show the coordinates
             gridContainer.appendChild(cell);
           }
         }
@@ -106,13 +132,18 @@ function visualGame(elementID) {
     ];
 
     // Place ships on the board (hardcoded for demonstration)
-    placeShip('gameBoard', ships[0], 'C-3', 'horizontal'); 
-    placeShip('gameBoard', ships[1], 'E-5', 'vertical');   
-    placeShip('gameBoard', ships[2], 'F-9', 'vertical');
-    placeShip('gameBoard', ships[3], 'I-2', 'horizontal');   
-    placeShip('gameBoard', ships[4], 'A-1', 'horizontal');
+    placeShip(elementID, ships[0], 'C-3', 'horizontal'); 
+    placeShip(elementID, ships[1], 'E-5', 'vertical');   
+    placeShip(elementID, ships[2], 'F-9', 'vertical');
+    placeShip(elementID, ships[3], 'I-2', 'horizontal');   
+    placeShip(elementID, ships[4], 'A-2', 'horizontal');
    
 }
 
-// Initialize game visualization
-visualGame('gameBoard');
+
+function visualizegame () {
+    visualGame('gameBoard');
+}
+
+visualizegame();
+

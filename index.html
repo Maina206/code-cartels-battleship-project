@@ -67,9 +67,10 @@
                     <!-- we'll add the JS visual representation here -->
                     <div id="hit" class="grid"></div>
                 </div>
+
                 <div id="miss" class="sub-step">
                     <h4>Miss Scenario</h4>
-                    <div id="players">
+                    <div class="players">
                         <div id="player1" class="grid"></div>
                         <div id="player2" class="grid"></div>
                     </div>
@@ -81,7 +82,31 @@
                 </div>
                 <div class="sub-step">
                     <h4>Lost Scenario</h4>
+                    <div class="players">
+                        <!--Player 1 grids-->
+                        <div>
+                            <h5>Player 1 Battleship Board</h5>
+                            <div id="lostP1" class="grid"></div>
+                            <h5>Player one loses the game</h5>
+                            <p>Description goes here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie quis quam at tincidunt. Duis nisi sem, aliquam sit amet risus sed, tristique dapibus tortor. Maecenas maximus purus nunc, sit amet rhoncus dui sodales nec. Morbi hendrerit tellus massa, quis rutrum nulla eleifend a. Nullam quis leo vel nisl sollicitudin consectetur. Nunc ac purus interdum, accumsan eros sit amet, vehicula tellus. Nulla vehicula cursus quam, et tempus massa ultrices nec. Vestibulum euismod aliquet mauris, a scelerisque sem efficitur in. Ut ligula nisl, egestas non nisi nec, fringilla porttitor nibh. Sed a urna justo.
+
+                                Nulla facilisi. Pellentesque volutpat pulvinar quam. Integer quis pulvinar urna. Nulla sem arcu, aliquet eu ex eu, vehicula faucibus nulla. Curabitur sagittis odio non pulvinar pellentesque. Aliquam lobortis ex nec ultrices euismod. Sed eros purus, ultrices eu augue condimentum, placerat ultricies nisi.
+                                
+                                Pellentesque vitae pellentesque augue, vitae egestas elit. Phasellus sollicitudin neque sapien. Phasellus venenatis lacus non erat euismod finibus. Quisque varius, mauris nec dignissim ultrices, nisl nunc volutpat arcu, vitae commodo lorem velit eu magna. Aliquam erat volutpat. Nunc imperdiet congue leo nec euismod. Praesent pellentesque lacus et molestie pretium. Nulla facilisi. Proin eu ipsum ultrices, iaculis nisi sit amet, efficitur dolor. Integer non diam mattis, vestibulum purus ac, rutrum ipsum. Suspendisse ullamcorper vulputate erat, ut luctus neque faucibus id. Nullam non erat ultrices, iaculis dolor.</p>
+                        </div>
+                        <!--Player 2 grids-->
+                        <div>
+                            <h5>Player 2 Pins Board</h5>
+                            <div id="winP2" class="grid"></div>
+                            <h5>Player two wins the game</h5>
+                            <p>Description goes here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie quis quam at tincidunt. Duis nisi sem, aliquam sit amet risus sed, tristique dapibus tortor. Maecenas maximus purus nunc, sit amet rhoncus dui sodales nec. Morbi hendrerit tellus massa, quis rutrum nulla eleifend a. Nullam quis leo vel nisl sollicitudin consectetur. Nunc ac purus interdum, accumsan eros sit amet, vehicula tellus. Nulla vehicula cursus quam, et tempus massa ultrices nec. Vestibulum euismod aliquet mauris, a scelerisque sem efficitur in. Ut ligula nisl, egestas non nisi nec, fringilla porttitor nibh. Sed a urna justo.
+
+                                Nulla facilisi. Pellentesque volutpat pulvinar quam. Integer quis pulvinar urna. Nulla sem arcu, aliquet eu ex eu, vehicula faucibus nulla. Curabitur sagittis odio non pulvinar pellentesque. Aliquam lobortis ex nec ultrices euismod. Sed eros purus, ultrices eu augue condimentum, placerat ultricies nisi.
+                                
+                                Pellentesque vitae pellentesque augue, vitae egestas elit. Phasellus sollicitudin neque sapien. Phasellus venenatis lacus non erat euismod finibus. Quisque varius, mauris nec dignissim ultrices, nisl nunc volutpat arcu, vitae commodo lorem velit eu magna. Aliquam erat volutpat. Nunc imperdiet congue leo nec euismod. Praesent pellentesque lacus et molestie pretium. Nulla facilisi. Proin eu ipsum ultrices, iaculis nisi sit amet, efficitur dolor. Integer non diam mattis, vestibulum purus ac, rutrum ipsum. Suspendisse ullamcorper vulputate erat, ut luctus neque faucibus id. Nullam non erat ultrices, iaculis dolor.</p>
+                        </div>
                     <!-- we'll add the JS visual representation here -->
+                </div>
                 </div>
                 <div class="sub-step">
                     <h4>Win Scenario</h4>
@@ -91,5 +116,6 @@
         </section>
     </main>
     <script src="./js/initial.js"></script>
+    <script src="./js/lossscenario.js"></script>
 </body>
 </html>
