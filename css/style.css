@@ -97,11 +97,10 @@ h4 {
 #players {
     display: flex;
     padding: 10px;
-    margin: 15px;
 }
 
 #player1 {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .grid {
@@ -143,5 +142,21 @@ h4 {
         width: 100%; 
         font-size: 16px;
     }
+    
+    
+    
+}
+.small-button {
+    padding: 2px  5px;  /* Adjust padding for size */
+    font-size: 12px;    /* Smaller font size */
+    border: none;       /* Remove border */
+    background-color: #007BFF; /* Button color */
+    color: white;       /* Text color */
+    cursor: pointer;    /* Change cursor to pointer */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
 }
 
+.small-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

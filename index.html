@@ -50,7 +50,7 @@
                 </div>
                 <div>
                     <h4>Visual Representation of How to Arrange the Ships</h4>
-                    <!-- we'll add the JS visual representation here -->
+                    
                      <div id="gameBoard" class="sub-step grid"></div>
                 </div>
             </div>
@@ -62,11 +62,31 @@
 
             <div class="step" id="step5">
                 <h3>Step 5: Take turns firing shots</h3>
-                <div class="sub-step">
+                <!--hit-->
+                <div  id="hitContainer" class="sub-step">
                     <h4>Hit Scenario</h4>
-                    <!-- we'll add the JS visual representation here -->
-                    <div id="hit" class="grid"></div>
+                    <p>
+                        In the hit scenario, players take turns attempting to strike their opponent's ships. When a player selects a coordinate to attack, the game checks if there is a ship located at that coordinate. 
+                        If there is a ship present, the attack is considered a hit, and the corresponding part of the ship is marked. 
+                        A visual indication (such as a red color) shows that the attack was successful. 
+                        Conversely, if no ship is present, the attack is marked as a miss (typically shown in gray). 
+                        The game continues until all of one player's ships are sunk, declaring the other player as the winner. Below this explanation there are two grids one for "player 1's battleship grid board "and the other for "player 2's battleship pin board", You as a player can access them to show you a brief explanation on how the hit scenario works;
+                    </p>
+                    <!-- <h3>Player 1</h3> -->
+                    <!-- <div id="hit" class="grid"></div> -->
+                    <div id="players">
+                      <div >
+                      <h3>player1's Battleship board</h3>
+                      <div id="player1" class="grid" ></div>
+                    </div>
+                    <div>
+                        <h3>player2's battleship pin board</h3>
+                      <div id="player2" class="grid"></div>
+                    </div>
+                    </div>
                 </div>
+
+                <!--Miss-->
                 <div id="miss" class="sub-step">
                     <h4>Miss Scenario</h4>
                     <div id="players">
@@ -91,5 +111,7 @@
         </section>
     </main>
     <script src="./js/initial.js"></script>
+    <script src="./js/HitScenario.js"></script>
+    
 </body>
 </html>
