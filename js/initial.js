@@ -77,7 +77,7 @@ function createBattleshipPinGrid(elementID) {
       }
 
 
-//placing and displaying the ships
+//Visualizing the general game board
 function placeShip(gridID, ship, startCoordinate, orientation) {
     const gridContainer = document.getElementById(gridID);
     const [startRow, startCol] = convertCoordinate(startCoordinate);
@@ -110,6 +110,8 @@ function placeShip(gridID, ship, startCoordinate, orientation) {
     }
 }
 
+
+
 // Helper function to convert coordinate from string to array
 function convertCoordinate(coordinate) {
     const rowLabels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
@@ -140,10 +142,17 @@ function visualGame(elementID) {
    
 }
 
+function visualPin(elementID) {
+    createBattleshipPinGrid(elementID);
+}
 
 function visualizegame () {
     visualGame('gameBoard');
 }
-
 visualizegame();
+
+function visualizePinBoard () {
+    visualPin('pinBoard');
+}
+visualizePinBoard();
 

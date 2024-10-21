@@ -10,23 +10,35 @@
     <header>
         <div class="container" id="navigation">
             <h1>BattleShip Tutorial</h1>
-            <select class="dropdown">
-                <option value="">Select a Step</option>
-                <option value="introduction">Introduction</option>
-                <option value="step1">Step 1</option>
-                <option value="step2">Step 2</option>
-                <option value="step3">Step 3</option>
-                <option value="step4">Step 4</option>
-                <option value="step5">Step 5</option>
-            </select>
+            <div class="dropdown">
+                <button class="simulateGame">Select a Step</button>
+                <div class="dropdown-content">
+                    <a href="#introduction">Introduction</a>
+                    <a href="#step1">Step 1</a>
+                    <a href="#step2">Step 2</a>
+                    <a href="#step3">Step 3</a>
+                    <a href="#step4">Step 4</a>
+                    <a href="#step5">Step 5</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
         <section class="container" id="introduction">
+            <hr class="horizontalLine">
+            <p><strong>OBJECTIVE: </strong> Sink all five of your opponents’ ships first!</p>
+            <p><strong>NUMBER OF PLAYERS: </strong> 2 players</p>
+            <p><strong>MATERIALS: </strong> 2 game boards, 10 ships, red pegs, white pegs</p>
+            <p><strong>TYPE OF GAME: </strong> Strategy board game</p>
+            <hr class="horizontalLine">
             <h2>Introduction to Battleship</h2>
-            <p>Battleship is a strategic game where players try to sink each other's ships. The game has a rich history, dating back to the early 20th century...</p>
-            <img src="battleship-image.jpg" alt="Battleship Game" class="game-image">
+            <p>
+                Battleship has been a popular game for generations, having inspired multiple board games, handheld electronic versions, computer games, and even a film. 
+            
+                However, after all those versions and rule changes, the game is still simple enough to be played with only graph paper and pens. In this tutorial, we’ll teach you the rules for the classic board game and the old-school graph paper version. Stay safe out there on the open seas!
+            </p>
+            <img src="./assets/battleshipgame.jpg" alt="Battleship Game" class="game-image">
         </section>
 
         <section class="container" id="steps">
@@ -34,29 +46,65 @@
             
             <div class="step" id="step1">
                 <h3>Step 1: Players sit opposite each other</h3>
-                <!-- Add additional information here -->
+                <p>The standard Battleship board game set comes with two boxes, one for each player. Each box opens to reveal two grids, one on each inside surface. As you set up, make sure you and your opponent are seated opposite one another so you can’t see the inside of one another’s boxes.</p>
+                <img src="./assets/Gamearrangement.jpg" alt="Game arrangement" class="game-image">
             </div>
 
             <div class="step" id="step2">
                 <h3>Step 2: Ensure you have all the ships</h3>
-                <!-- Add additional information here -->
+                <p>In Battleship, ships come in various lengths, taking up a different number of squares on the grid. You and your opponent should both have identical collections with 5 ships each as well as plenty of white and red pegs. The typical 5 ships include</p>
+
+                <ul>
+                    <li>The aircraft carrier -five squares long denoted by  <strong>A*</strong></li>
+                    <li>The battleship - four squares long denoted by  <strong>B*</strong></li>
+                    <li>The cruiser - three squares long denoted by  <strong>C*</strong></li>
+                    <li>The submarine - three squares long, same as the cruiser denoted by  <strong>S*</strong></li>
+                    <li>The destroyer - two squares long denoted by  <strong>D*</strong></li>
+                </ul>
             </div>
 
             <div class="step" id="step3">
                 <h3>Step 3: Arrange your ships secretly</h3>
+                <p>With the boxes open, you and your opponent must place your 5 ships on the lower grid of your boxes, anchoring each ship into the holes on the grid. Don’t look at what your opponent is doing, and make sure they can’t see your ship configuration either. Follow these rules while placing your ships:</p>
                 <div class="sub-step">
                     <h4>Rules of Placement</h4>
-                    <!-- we'll add the JS visual representation here -->
+                    <ol>
+                        <li>Ships can be placed horizontally or vertically, but not diagonally.</li>
+                        <li>You must place all five ships on the grid.</li>
+                        <li>Every ship must be completely on the grid. No ship can hang off the edge of the board.</li>
+                        <li>Ships cannot overlap each other.</li>
+                        <li>Once your ships are placed and the game has begun, you are not allowed to move your ships again.</li>
+                    </ol>
                 </div>
-                <div>
-                    <h4>Visual Representation of How to Arrange the Ships</h4>
-                    <!-- we'll add the JS visual representation here -->
-                     <div id="gameBoard" class="sub-step grid"></div>
+                <div class="sub-step">
+                    <h4>How to Arrange your Ships</h4>
+                    <div class="players">
+                        <!--Player board grid-->
+                        <div>
+                            <h5>Player's Battleship Board</h5>
+                            <div id="gameBoard" class="grid"></div>
+                        </div>
+                        <!--Player pin grid-->
+                        <div>
+                            <h5>Player's Pins Board</h5>
+                            <div id="pinBoard" class="grid"></div>
+                        </div>
+                </div>
+                        <p>
+                            In Battleship, each player has two boards. On the <strong>left board</strong>, players secretly arrange their ships either horizontally or vertically, ensuring that the ships do not overlap and remain within the grid's boundaries.
+                        </p>
+                        <p>
+                            The <strong>right board</strong> right board is used to track attacks, where players place pins at specific coordinates to target their opponent’s ships.
+                        </p>
+                        <p>
+                            The objective is to deduce the locations of the hidden ships. Players take turns calling out coordinates, marking hits or misses as they go. A ship is considered sunk when all its sections have been hit. The game continues until one player successfully sinks all of their opponent’s ships, leading to victory. 
+                        </p>
                 </div>
             </div>
 
             <div class="step" id="step4">
                 <h3>Step 4: Decide which player goes first</h3>
+                <p>If you and your opponent don't agree on who should go first right away, flip a coin or decide in some other randomized way. If you’re playing multiple games in a row, consider letting the player who lost the last game go first in the next one.</p>
                 <!-- Add additional information here -->
             </div>
 
@@ -81,36 +129,33 @@
                     <!-- we'll add the JS visual representation here -->
                 </div>
                 <div class="sub-step">
-                    <h4>Lost Scenario</h4>
+                    <h3>End Game - a Win and Loose Scenario</h3>
                     <div class="players">
                         <!--Player 1 grids-->
                         <div>
                             <h5>Player 1 Battleship Board</h5>
                             <div id="lostP1" class="grid"></div>
-                            <h5>Player one loses the game</h5>
-                            <p>Description goes here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie quis quam at tincidunt. Duis nisi sem, aliquam sit amet risus sed, tristique dapibus tortor. Maecenas maximus purus nunc, sit amet rhoncus dui sodales nec. Morbi hendrerit tellus massa, quis rutrum nulla eleifend a. Nullam quis leo vel nisl sollicitudin consectetur. Nunc ac purus interdum, accumsan eros sit amet, vehicula tellus. Nulla vehicula cursus quam, et tempus massa ultrices nec. Vestibulum euismod aliquet mauris, a scelerisque sem efficitur in. Ut ligula nisl, egestas non nisi nec, fringilla porttitor nibh. Sed a urna justo.
-
-                                Nulla facilisi. Pellentesque volutpat pulvinar quam. Integer quis pulvinar urna. Nulla sem arcu, aliquet eu ex eu, vehicula faucibus nulla. Curabitur sagittis odio non pulvinar pellentesque. Aliquam lobortis ex nec ultrices euismod. Sed eros purus, ultrices eu augue condimentum, placerat ultricies nisi.
-                                
-                                Pellentesque vitae pellentesque augue, vitae egestas elit. Phasellus sollicitudin neque sapien. Phasellus venenatis lacus non erat euismod finibus. Quisque varius, mauris nec dignissim ultrices, nisl nunc volutpat arcu, vitae commodo lorem velit eu magna. Aliquam erat volutpat. Nunc imperdiet congue leo nec euismod. Praesent pellentesque lacus et molestie pretium. Nulla facilisi. Proin eu ipsum ultrices, iaculis nisi sit amet, efficitur dolor. Integer non diam mattis, vestibulum purus ac, rutrum ipsum. Suspendisse ullamcorper vulputate erat, ut luctus neque faucibus id. Nullam non erat ultrices, iaculis dolor.</p>
                         </div>
                         <!--Player 2 grids-->
                         <div>
                             <h5>Player 2 Pins Board</h5>
                             <div id="winP2" class="grid"></div>
-                            <h5>Player two wins the game</h5>
-                            <p>Description goes here Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc molestie quis quam at tincidunt. Duis nisi sem, aliquam sit amet risus sed, tristique dapibus tortor. Maecenas maximus purus nunc, sit amet rhoncus dui sodales nec. Morbi hendrerit tellus massa, quis rutrum nulla eleifend a. Nullam quis leo vel nisl sollicitudin consectetur. Nunc ac purus interdum, accumsan eros sit amet, vehicula tellus. Nulla vehicula cursus quam, et tempus massa ultrices nec. Vestibulum euismod aliquet mauris, a scelerisque sem efficitur in. Ut ligula nisl, egestas non nisi nec, fringilla porttitor nibh. Sed a urna justo.
-
-                                Nulla facilisi. Pellentesque volutpat pulvinar quam. Integer quis pulvinar urna. Nulla sem arcu, aliquet eu ex eu, vehicula faucibus nulla. Curabitur sagittis odio non pulvinar pellentesque. Aliquam lobortis ex nec ultrices euismod. Sed eros purus, ultrices eu augue condimentum, placerat ultricies nisi.
-                                
-                                Pellentesque vitae pellentesque augue, vitae egestas elit. Phasellus sollicitudin neque sapien. Phasellus venenatis lacus non erat euismod finibus. Quisque varius, mauris nec dignissim ultrices, nisl nunc volutpat arcu, vitae commodo lorem velit eu magna. Aliquam erat volutpat. Nunc imperdiet congue leo nec euismod. Praesent pellentesque lacus et molestie pretium. Nulla facilisi. Proin eu ipsum ultrices, iaculis nisi sit amet, efficitur dolor. Integer non diam mattis, vestibulum purus ac, rutrum ipsum. Suspendisse ullamcorper vulputate erat, ut luctus neque faucibus id. Nullam non erat ultrices, iaculis dolor.</p>
                         </div>
-                    <!-- we'll add the JS visual representation here -->
                 </div>
-                </div>
-                <div class="sub-step">
-                    <h4>Win Scenario</h4>
-                    <!-- we'll add the JS visual representation here -->
+                <p>To simulate a 2 minutes game play, click the button below:</p>
+                <button class="simulateGame" id="simulateGame" type="button">Simulate Game Play</button>
+                <h4>Let's take an example - player 2 wins the game and player looses the game</h4>
+                <p>In this scenario, Player 2 attempts to attack Player 1 by placing pins on their pinboard and calling out the coordinates to hit Player 1’s ships. Player 1 then checks their own shipboard to see if the coordinate matches the location of any of their ships.
+                <p>
+                    If it does, it's marked as a hit, and the ship starts taking damage. If not, it’s marked as a miss. Player 1 also has a chance to attack by calling out coordinates from their pinboard, targeting Player 2’s ships.
+                </p>
+                <p>
+                    The game continues with each player taking turns until one player successfully sinks all of the other player’s ships, declaring them the winner.
+                </p>
+                <p>
+                    In this scenario, we're only simulating player 2 attacking player 1, but when playing the game, both players will have a chance to attack their opponent and also take hits to their ships.
+                </p>
+
                 </div>
             </div>
         </section>
