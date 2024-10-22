@@ -120,18 +120,16 @@
                                         Conversely, if no ship is present, the attack is marked as a miss (typically shown in gray). 
                                         The game continues until all of one player's ships are sunk, declaring the other player as the winner. Below this explanation there are two grids one for "player 1's battleship grid board "and the other for "player 2's battleship pin board", You as a player can access them to show you a brief explanation on how the hit scenario works;
                                     </p>
-                                    <!-- <h3>Player 1</h3> -->
-                                    <!-- <div id="hit" class="grid"></div> -->
-                                    <div id="players">
+                                    <!-- <div class="players">
                                       <div >
                                       <h3>player1's Battleship board</h3>
-                                      <div id="player1" class="grid" ></div>
+                                      <div id="playerOne" class="grid" ></div>
                                     </div>
                                     <div>
                                         <h3>player2's battleship pin board</h3>
-                                      <div id="player2" class="grid"></div>
+                                      <div id="playerTwo" class="grid"></div>
                                     </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                 <div id="miss" class="sub-step">
@@ -144,21 +142,22 @@
 
                     </p>
                     <div id="players">
-                        <div>
+                        <!-- <div>
                             <h3>Player 1's Battleship board</h3>
                         <div id="player1" class="grid"></div>
-                        </div>
-                        <div>
+                        </div> -->
+                        <!-- <div>
                             <h3>Player 2's Battleship pin board</h3>
                         <div id="player2" class="grid"></div>
-                        </div>
+                        </div> -->
+                    </div>
                     </div>
                 
                     <div id="sinkContainer" class="sub-step">
                         <h4>Sink Scenario</h4>
                         <p>Announce when each ship sinks. If every square of a ship gets hit, that ship is considered sunk. Players should inform each other whenever a ship is sunk, naming the type of ship that was hit.</p>
                     </div>
-                    <div id="players">
+                    <!-- <div id="players">
                         <div class="player-container">
                             <h2>Player 1's Board</h2>
                             <div id="player1" class="grid"></div>
@@ -168,9 +167,9 @@
                             <h2>Player 2's Pin Grid</h2>
                             <div id="player2" class="grid"></div>
                         </div>
-                    </div>
+                    </div> -->
                     
-                    <button class="simulateGame" id="sinkButton">Sink</button>
+                    <!-- <button class="simulateGame" id="sinkButton">Sink</button> -->
                 </div>
                 <div class="sub-step">
                     <h3>End Game - a Win and Loose Scenario</h3>
@@ -199,16 +198,18 @@
                 <p>
                     In this scenario, we're only simulating player 2 attacking player 1, but when playing the game, both players will have a chance to attack their opponent and also take hits to their ships.
                 </p>
+                
 
                 </div>
-            </div>
         </section>
     </main>
-    <script src="./js/initial.js"></script>
-    <script src="./js/lossscenario.js"></script>
-    <script src="./js.js"></script>
-    <script src="./miss.js"></script>
-    <script src="./js/HitScenario.js"></script>
-    <script src="./js/sink.js"></script>
+    
+    <script src="./js/initial.js" defer></script>
+    <script src="./js/lossscenario.js" defer></script>
+    <script src="./js/HitScenario.js" defer></script>
+    <script src="./js/sink.js" defer></script>
+    
+   
+    
 </body>
 </html>
