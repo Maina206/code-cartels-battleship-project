@@ -34,5 +34,5 @@ https://maina206.github.io/code-cartels-battleship-project/
 3. JavaScript
 
 ## License
-The content of this site is licensed under the Moringa School license  
+The content of this site is licensed under the MIT license  
 Copyright (c) 2024.
